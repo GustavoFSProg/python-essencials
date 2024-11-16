@@ -1,0 +1,54 @@
+﻿https://www.vivaolinux.com.br/dica/Instalando-o-pyenv-no-Linux-Mint-e-Ubuntu/
+
+INSTALANDO O PYENV NO LINUX MINT E UBUNTU
+
+
+
+O pyenv é um gerenciador de versões do Python. Ele permite que se instale e gerencie várias versões do Python usando a conta de usuário normal e permite manter várias versões isoladas umas das outras.
+
+Esta dica foi testada no Mint 17.2, Mint 17.3, Mint 18, Raspbian Jessie(2016) e Ubuntu 14.04.3.
+
+Para começar vamos atualizar o apt-get e instalar as dependências:
+
+ sudo apt-get update && sudo apt-get upgrade
+$ sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev git
+
+Instaladas as dependências vamos passar a instalar o pyenv. Na página do projeto (https://github.com/yyuu/pyenv) tem um script de instalação que podemos chamar assim:
+
+ sudo curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+
+Ao final da instalação o script apresenta um aviso orientando a adicionar o pyenv ao load path editando seu arquivo ~/.bash_profile e inserindo as linhas apresentadas logo abaixo ao aviso. Podemos fazer isso no .profile ou no .bash_profile ou então no .bashrc, as linhas são:
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+Abra seu editor de textos favorito e cole estas linhas no final do seu ~/.profile (ou um dos outros citados), depois salve e feche.
+
+No terminal vamos reiniciar, para ter efeito a mudança ,com:
+
+ source ~/.profile
+ou
+ source ~/.bash_profile
+ou
+ source ~/.bashrc
+
+Conforme o arquivo que você editou.
+
+Para testar é só chamar o pyenv no terminal:
+
+ pyenv
+
+
+ pyenv vensions //mostra quais versões do Python estão instaladas
+ pyenv install -l //mostra uma lista das versões disponíveis para instalação
+ pyenv install //instala a versão solicitada ex.: pyenv install 3.5.1
+ pyenv global //torna principal a versão especificada após a palavra global ex.: $pyenv global 3.5.1
+
+Agora é só instalar as versões que te interessarem da lista.
+
+Abraço e até a próxima.
+
+Fonte: https://github.com/yyuu/pyenv
+ATIVANDO O VENV no LINUX:
+
+source .venv/bin/activate 

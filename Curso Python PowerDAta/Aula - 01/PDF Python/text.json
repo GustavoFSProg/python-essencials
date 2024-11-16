@@ -1,0 +1,14 @@
+{
+    "Users": [
+        {
+            "name": "Gustavo Sohne",
+            "idade": "44",
+            "profissao": "Web Developer"
+        },
+        {
+            "name": "Joao",
+            "idade": "52",
+            "profissao": "Policial"
+        }
+    ]
+}

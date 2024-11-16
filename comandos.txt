@@ -1,0 +1,21 @@
+PARA CRIAR O VENV:
+
+ python -m venv .venv
+
+ PARA ATIVAR O VENV:
+
+  source .venv/bin/activate
+
+  PARA DESATIVAR O VENV: 
+
+   deactivate
+
+   PARA INSTALAR O PYTHON LOCAL:
+     pyenv local <PYTHON VERSION>
+
+     EXEMPLO:
+     pyenv local 2.7.18
+
+     pyenv install 3.12.1
+
+
